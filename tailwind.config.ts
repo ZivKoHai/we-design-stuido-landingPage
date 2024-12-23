@@ -8,9 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        opensans: ["Open Sans", "sans-serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: "var(--accent-color)",
+        "accent-hover": "var(--accent-color-hover)",
+        text: "var(--text-color)",
       },
     },
   },

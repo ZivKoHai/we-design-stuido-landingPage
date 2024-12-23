@@ -3,19 +3,96 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #f4efe9;
+  --foreground: #4e4138;
+  --accent-color: #f4efe9;
+  --accent-color-hover: #dad2bf;
+  --text-color: #4e4138;
+  --power4-out: linear(
+    0,
+    0.1641 3.52%,
+    0.311 7.18%,
+    0.4413 10.99%,
+    0.5553 14.96%,
+    0.6539 19.12%,
+    0.738 23.5%,
+    0.8086 28.15%,
+    0.8662 33.12%,
+    0.9078 37.92%,
+    0.9405 43.12%,
+    0.965 48.84%,
+    0.9821 55.28%,
+    0.992 61.97%,
+    0.9976 70.09%,
+    1
+  );
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+img {
+  font-style: italic;
+}
+
+.main-container {
+  --padding: 2rem;
+  --width: 1300px;
+  width: min(var(--width), 100% - var(--padding));
+  margin: 0 auto;
+  background-color: var(--background);
+}
+
+#sidebar-active:checked ~ #overlay {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.links-container {
+  transition: right 0.75s var(--power4-out);
+}
+
+.hover\:bg-accent-color:hover {
+  background-color: var(--accent-color);
+}
+.links-container {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 10;
+  width: 300px;
+  height: 100%;
+  background-color: var(--background);
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+  transition: right 0.75s var(--power4-out);
+}
+nav a {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 30px;
+  justify-content: flex-start;
+  height: auto;
+}
+.open-sidebar-button,
+.close-sidebar-button {
+  display: block;
+  cursor: pointer;
+}
+
+.md\\:hidden {
+  display: none;
+}
+
+#sidebar-active:checked ~ .links-container {
+  right: 0;
 }
