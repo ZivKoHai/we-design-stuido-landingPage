@@ -12,6 +12,8 @@ const opensans = Open_Sans({
 export const metadata: Metadata = {
   title: "We Design Studio",
   description: "סטודיו עיצוב לחללים פרטיים ועסקיים",
+  keywords:
+    "סטודיו עיצוב, עיצוב חללים, עיצוב פרטי, עיצוב עסקי, עיצוב קולנוע, עיצוב חדרים, עיצוב קולנוע, עיצוב חדרים, עיצוב חדרים, עיצוב חדרים",
 };
 
 export default function RootLayout({

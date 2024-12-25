@@ -34,7 +34,10 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="main-container flex flex-col gap-8 py-16">
+    <section
+      id="testimonials"
+      className="main-container flex flex-col gap-8 py-16"
+    >
       <div>
         <WeH2>מה מספרים עלינו</WeH2>
       </div>
@@ -60,6 +63,6 @@ export default function Testimonials() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

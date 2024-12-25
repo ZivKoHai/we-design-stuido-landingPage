@@ -13,11 +13,14 @@ export default function LatestProjects() {
   ];
 
   return (
-    <div className="main-container min-h-screen py-10 flex flex-col gap-10">
+    <section
+      id="projects"
+      className="main-container min-h-screen py-10 flex flex-col gap-10"
+    >
       <div>
         <WeH2>הפרויקטים האחרונים שלנו</WeH2>
       </div>
       <Slider images={images} />
-    </div>
+    </section>
   );
 }

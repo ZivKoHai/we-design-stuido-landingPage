@@ -14,9 +14,9 @@ export default function Home() {
       <SubHero />
       <Services />
       <About />
+      <TheProcess />
       <LatestProjects />
       <Testimonials />
-      <TheProcess />
       <FAQ />
       <Contact />
     </>

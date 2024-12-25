@@ -5,7 +5,10 @@ import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
-    <div className="main-container flex flex-col-reverse sm:flex-row py-10 gap-10 relative">
+    <section
+      id="contact"
+      className="main-container flex flex-col-reverse sm:flex-row py-10 gap-10 relative"
+    >
       <div className="basis-1/2 flex flex-col gap-10 justify-between">
         <div className="flex flex-col sm:flex-row justify-between gap-10 w-full">
           <div>
@@ -53,6 +56,6 @@ export default function Contact() {
           <ContactForm />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

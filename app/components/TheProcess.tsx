@@ -32,8 +32,11 @@ export default function TheProcess() {
   ];
 
   return (
-    <div className="main-container h-fit py-20 flex flex-col sm:flex-row gap-10">
-      <div className="basis-1/2 relative h-[500px] overflow-hidden w-full">
+    <section
+      id="process"
+      className="main-container h-fit py-20 flex flex-col sm:flex-row gap-10"
+    >
+      <div className="basis-1/2 relative min-h-[500px] overflow-hidden w-full rounded-lg">
         <Image
           src="/sliderImages/we___designstudios_1721727613_3418421446458019401_65377472209.jpg"
           alt="The Process"
@@ -46,22 +49,22 @@ export default function TheProcess() {
           <WeH3 className="text-right">התהליך</WeH3>
           <WeP>שלבים שאנחנו עובדים בהם בכל פרויקט שאנו מתחילים עם הלקוח</WeP>
         </div>
-        <div className="flex flex-col gap-4" dir="rtl">
+        <ol dir="rtl" className="relative border-s border-foreground">
           {ProcessItems.map((item, index) => {
             return (
-              <details
-                key={index}
-                className="border-b-[0.5px] border-foreground pb-3 hover:cursor-pointer"
-              >
-                <summary className="text-right list-outside ::marker:text-1xl">
+              <li key={index} className="mb-10 ms-4">
+                <div className="absolute w-3 h-3 bg-foreground rounded-full mt-1.5 -start-1.5 border border-foreground"></div>
+                <h3 className="text-sm font-semibold text-foreground">
                   {item.name}
-                </summary>
-                <p className="py-4">{item.description}</p>
-              </details>
+                </h3>
+                <p className="text-base font-normal text-foreground">
+                  {item.description}
+                </p>
+              </li>
             );
           })}
-        </div>
+        </ol>
       </div>
-    </div>
+    </section>
   );
 }

@@ -25,7 +25,10 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="main-container h-fit py-20 flex flex-col gap-10">
+    <section
+      id="faq"
+      className="main-container h-fit py-20 flex flex-col gap-10"
+    >
       <WeH2 className="sm:text-center text-right">שאלות נפוצות</WeH2>
       <div className="flex flex-col gap-4 w-full sm:w-[70%] mx-auto" dir="rtl">
         {questionsAndAnswers.map((item, index) => {
@@ -40,6 +43,6 @@ export default function FAQ() {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
